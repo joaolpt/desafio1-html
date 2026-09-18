@@ -1,45 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <title>Página Principal | Clínica Médica</title>
     <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="menu">
+        <!-- Substituído por <nav> para identificar bloco de navegação primário -->
+        <nav class="menu">
             <details>
                 <summary>Menu</summary>
                 <ul>
-                    <li><a href="sobreclinica.html">Sobre a Clinica</a></li>
+                    <li><a href="index.html">Página Principal</a></li>
+                    <li><a href="sobreclinica.html">Sobre a Clínica</a></li>
                     <li><a href="atendimento.html">Horários de Atendimento</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </details>
-        </div>
+        </nav>
 
-        <div class="main">
-            <div class="header">
-                <img src="assets/img1.jpg" width="250">
-            </div>
+        <!-- <main> delimita o conteúdo central e único desta URL -->
+        <main class="main">
+            <!-- <header> para o topo com a mídia do banner -->
+            <header class="header">
+                <!-- 'alt' é obrigatório para acessibilidade e SEO -->
+                <img src="assets/img1.jpg" alt="Recepção moderna da clínica médica" width="250">
+            </header>
 
-            <div class="content">
-                <h1>Bem vindo, a clinica médica</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora odit pariatur, debitis rem magni
+            <!-- <section> para agrupar o bloco temático de apresentação -->
+            <section class="content">
+                <h1>Bem-vindo à Clínica Médica</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora odit pariatur, debitis rem magni
                     esse eaque quo laboriosam porro ipsum ab culpa! Rerum, doloribus optio architecto vitae ducimus vel
-                    veritatis.</p>
-            </div>
+                    veritatis.
+                </p>
+            </section>
 
-            <div class="footer">
+            <!-- <footer> e <address> para estruturar informações de contato legíveis para motores de busca -->
+            <footer class="footer">
                 <h2>Informações de Contato</h2>
-                <h3>Telefone: (99)99999-9999</h3>
-                <h3>Email: clinica@email.com</h3>
-            </div>
-        </div>
+                <address>
+                    <p>Telefone: <a href="tel:99999999999">(99) 99999-9999</a></p>
+                    <p>E-mail: <a href="mailto:clinica@email.com">clinica@email.com</a></p>
+                </address>
+            </footer>
+        </main>
     </div>
 </body>
 

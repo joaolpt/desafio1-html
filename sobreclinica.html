@@ -1,45 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
+    <title>Sobre a Clínica | Clínica Médica</title>
     <link rel="stylesheet" href="base.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="menu">
+        <!-- Mantido o padrão exato de navegação da página inicial -->
+        <nav class="menu">
             <details>
                 <summary>Menu</summary>
                 <ul>
-                    <li><a href="pag-principal.html">Inicio</a></li>
+                    <li><a href="index.html">Página Principal</a></li>
+                    <li><a href="sobreclinica.html">Sobre a Clínica</a></li>
                     <li><a href="atendimento.html">Horários de Atendimento</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </details>
-        </div>
+        </nav>
 
-        <div class="main">
-            <div class="header">
-                <img src="assets/img2.png" width="100">
-            </div>
+        <main class="main">
+            <header class="header">
+                <!-- Adicionado o atributo alt obrigatório -->
+                <img src="assets/img2.png" alt="Equipe médica da clínica" width="100">
+            </header>
 
-            <div class="content">
-                <h1>Sobre a Clinica</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius mollitia corporis obcaecati voluptatem
+            <section class="content">
+                <h1>Sobre a Clínica</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius mollitia corporis obcaecati voluptatem
                     numquam, modi porro quaerat pariatur, hic, fuga eaque ipsam accusamus. Iste, harum at tempora
-                    commodi earum debitis.</p>
-            </div>
+                    commodi earum debitis.
+                </p>
+            </section>
 
-            <div class="footer">
+            <footer class="footer">
                 <h2>Informações de Contato</h2>
-                <h3>Telefone: (99)99999-9999</h3>
-                <h3>Email: clinica@email.com</h3>
-            </div>
-        </div>
+                <address>
+                    <p>Telefone: <a href="tel:99999999999">(99) 99999-9999</a></p>
+                    <p>E-mail: <a href="mailto:clinica@email.com">clinica@email.com</a></p>
+                </address>
+            </footer>
+        </main>
     </div>
 </body>
 

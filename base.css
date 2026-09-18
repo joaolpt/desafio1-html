@@ -1,38 +1,186 @@
-html, body {
+/* 1. RESET BÁSICO E TIPOGRAFIA (Padrão de Mercado) */
+* {
+    box-sizing: border-box;
+    /* Garante que padding não quebre a largura do layout */
     margin: 0;
-}
-body {
-    background-color: #f1f1f1;
-    display: flex;
-    justify-content: center;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
+body {
+    background-color: #f0f4f8;
+    /* Fundo cinza azulado bem leve para não cansar a vista */
+    display: flex;
+    justify-content: center;
+    color: #334155;
+    /* Texto cinza escuro (mais legível que o preto puro) */
+}
+
+/* 2. MACRO-ARQUITETURA (O contêiner principal) */
 .wrapper {
     width: 1200px;
+    min-height: 100vh;
+    /* Garante que o site ocupe sempre a altura toda da tela */
     display: flex;
-    margin: 0 auto;
-    background-color: aquamarine;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Sombra suave nas bordas para dar efeito de "cartão" */
 }
+
+/* 3. MENU LATERAL (Navegação) */
+.menu {
+    width: 20%;
+    /* Aumentei de 15% para 20% para os links caberem melhor */
+    background-color: #1e293b;
+    /* Azul corporativo escuro */
+    color: white;
+    padding: 30px 20px;
+}
+
+.menu summary {
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.menu ul {
+    list-style: none;
+    /* Remove as bolinhas pretas da lista */
+}
+
+.menu a {
+    color: #94a3b8;
+    text-decoration: none;
+    /* Remove o sublinhado azul padrão dos links */
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid #334155;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ffffff;
+    /* Brilha ao passar o mouse */
+}
+
+/* 4. ÁREA PRINCIPAL (Miolo e Rodapé) */
 .main {
     display: flex;
     flex-flow: column;
-    width: 85%;
+    width: 80%;
 }
-.menu {
-    width: 15%;
-    background-color: aqua;
-    padding: 10px 20px 0px;
-}
+
 .header {
-    background-color: rgb(5, 108, 108);
+    background-color: #e2e8f0;
     min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid #3b82f6;
+    /* Uma fita azul para separar o header do conteúdo */
 }
+
 .content {
     background-color: white;
-    min-height: 300px;
-    padding: 20px;
+    min-height: 400px;
+    padding: 40px;
+    flex-grow: 1;
+    /* Faz o conteúdo empurrar o rodapé sempre lá para baixo */
+    line-height: 1.6;
 }
+
+.content h1,
+.content h2 {
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
 .footer {
-    background-color: rgb(99, 56, 240);
-    min-height: 150px;
+    background-color: #f8fafc;
+    min-height: 120px;
+    padding: 30px 40px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.footer address p {
+    margin-top: 8px;
+}
+
+.footer a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================================
+   BÔNUS: ESTILIZAÇÃO DE TABELA E FORMULÁRIO 
+   ========================================= */
+
+/* Tabela da página de horários */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Une as bordas separadas */
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f5f9;
+    font-weight: bold;
+}
+
+/* Formulário da página de contatos */
+fieldset {
+    border: 1px solid #cbd5e1;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #3b82f6;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-family: inherit;
+}
+
+button {
+    padding: 12px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="reset"] {
+    background-color: #94a3b8;
+    /* Botão de limpar mais discreto */
+}
+
+button:hover {
+    opacity: 0.9;
 }
