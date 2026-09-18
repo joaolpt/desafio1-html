@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +8,55 @@
     <title>Template - Utilizar como modelo</title>
     <link rel="stylesheet" href="base.css">
 </head>
+
 <body>
     <div class="wrapper">
         <div class="menu">
-            <!-- Aqui vai o seu menu -->
-            <ul>
-                <li><a href="#">Link</a></li>
-            </ul>
+            <details>
+                <summary>Menu</summary>
+                <ul>
+                    <li><a href="pag-principal.html">Inicio</a></li>
+                    <li><a href="sobreclinica.html">Sobre a clinica</a></li>
+                    <li><a href="atendimento.html">Horarios de Atendimento</a></li>
+                </ul>
+            </details>
         </div>
 
         <div class="main">
             <div class="header">
-                Header
-                <!-- Aqui vai o seu header -->
+                <img src="assets/img4.png" width="100">
             </div>
-    
+
             <div class="content">
-                Content
-                <!-- Aqui vai o seu conteúdo -->
+                <h1>Contatos:</h1>
+                <p>Telefone e WhatsApp: (99)99999-9999</p>
+                <p>Endereço: Rua inexistente,87</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5376.404897072895!2d-42.514090941798365!3d-17.66472374843857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb28064d85912d1%3A0x27e3fe62f28c1fbc!2sR.%20Inexistente%2C%20Capelinha%20-%20MG%2C%2039680-000!5e0!3m2!1spt-BR!2sbr!4v1789737899744!5m2!1spt-BR!2sbr"
+                    width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+                <fieldset>
+                    <legend>Informações para contato</legend>
+                    <div class="row">
+                        <label>Nome:</label><input type="text">
+                        <label>E-mail</label><input type="email">
+                        <label>Assunto</label><input type="text">
+                        <label>Mensagem</label><textarea placeholder="Digite aqui..."></textarea>
+
+                        <button type="reset">Limpar</button>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </fieldset>
             </div>
-    
+
             <div class="footer">
-                Footer
-                <!-- Aqui vai o seu rodapé -->
+                <h2>Informações de Contato</h2>
+                <h3>Telefone: (99)99999-9999</h3>
+                <h3>Email: clinica@email.com</h3>
             </div>
         </div>
     </div>
 </body>
+
 </html>
